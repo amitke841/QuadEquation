@@ -1,6 +1,8 @@
 #start
 
-import numpy
+import numpy as np
+import turtle
+import matplotlib.pyplot as plt
 import colorama
 from colorama import Fore
 
@@ -8,8 +10,8 @@ def quaequ():
     global x1,x2
     delta = (b**2-4*a*c)
 
-    x1 = (-b+numpy.sqrt(delta))/(2*a)
-    x2 = (-b-numpy.sqrt(delta))/(2*a)
+    x1 = (-b+np.sqrt(delta))/(2*a)
+    x2 = (-b-np.sqrt(delta))/(2*a)
     
     print(Fore.RED + "Quadratic Equation Results:")
     print("X1 is ",x1)
@@ -48,6 +50,15 @@ def Nekudot():
     Points = "(" + str(x1) + ",0), (" + str(x2) + ",0), (0," + str(Ypoint) + ")"
     print(Fore.YELLOW + Points)
 
+def Graph():
+    plt.style.use('_mpl-gallery')
+    x  = np.linspace(-50,50,100)
+    y = a*(x**2)+b*x+c
+    plt.plot(x,y)
+    plt.show()
+    #plt.axis('equal')
+
+
 print(Fore.GREEN + "start")
 
 
@@ -61,3 +72,5 @@ KodKod = Xkod, Ykod
 print(mm + str(KodKod))
 Tzir()
 Nekudot()
+Graph()
+#s = turtle.getscreen()
