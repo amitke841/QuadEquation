@@ -39,17 +39,11 @@ def find_kodkod(a, b, c):
 
 if __name__ == '__main__':
 
-    if 0:
         # get input from user
-        print(Fore.GREEN + "start")
-        A = int(input(Fore.WHITE + "Input A:"))
-        B = int(input("Input B:"))
-        C = int(input("Input C:"))
-    else:
-        # just for debug
-        A = 1
-        B = -8
-        C = 7
+    print(Fore.GREEN + "start")
+    A = int(input(Fore.WHITE + "Input A:"))
+    B = int(input("Input B:"))
+    C = int(input("Input C:"))
 
     min_max = pos_neg(A)
     kodkod = find_kodkod(A, B, C)
