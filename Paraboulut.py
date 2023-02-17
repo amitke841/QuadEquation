@@ -57,6 +57,20 @@ if __name__ == '__main__':
     print(Fore.RED + "Quadratic Equation Results:")
     print("X1 is ", x1)
     print("X2 is ", x2)
+    if min_max == max:
+        print(Fore.YELLOW + "Up Area: X < " + str(x_kod))
+        print("Down Area: X > " + str(x_kod))
+    else:
+        print(Fore.YELLOW + "Up Area: X > " + str(x_kod))
+        print("Down Area: X < " + str(x_kod))
+    x_big = max(x1, x2)
+    x_small = min(x1, x2)
+    if min_max == max:
+        print("Pos Area: " + str(x_small) + " < x < " + str(x_big))
+        print("Neg Area: X < " + str(x_small) + ", X > " + str(x_big))
+    else:
+        print("Pos Area: X > " + str(x_small) + ", X > " + str(x_big))
+        print("Neg Area: " + str(x_small) + " < x < " + str(x_big))
 
     plt.style.use('_mpl-gallery')
     x = np.linspace(-2 + min(x1, x2), 2 + max(x1, x2), 100)
